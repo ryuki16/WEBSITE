@@ -10,14 +10,43 @@ h1 {
     font-family: 'Inter',  sans-serif; /* Keluarga font yang digunakan di tajuk (header) */
     border-bottom: 3px solid #D6FF6B; /* Garis bawah tajuk (header) */
     max-width: 200px; /* Ketebalan garis bawah tajuk (header) */
+    animation: glow 5s infinite; /* Animasi cahaya pada tajuk (header) */
 }
 h2 {
     color: #FD98FB; /* Warna tajuk (header) */
     font-size: 20px; /* Ukuran font tajuk (header) */
     font-family: 'Inter',  sans-serif; /* Keluarga font yang digunakan di tajuk (header) */
+    animation: glow 5s infinite; /* Animasi cahaya pada tajuk (header) */
 }
 h3 {
     color: #FD98FB; /* Warna tajuk (header) */
     font-size: 18px; /* Ukuran font tajuk (header) */
     font-family: 'Inter',  sans-serif; /* Keluarga font yang digunakan di tajuk (header) */
+    animation: color-change 10s infinite; /* Animasi perubahan warna pada tajuk (header) */
+}
+
+img, iframe {
+    animation: fade-in 5s; /* Animasi kemunculan gambar */
+    display: block; /* Memaksa elemen membuat baris baru */
+    margin: 20px; /* Memberikan jarak di atas dan bawah gambar, serta memusatkan gambar */
+}
+
+@keyframes color-change {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: purple; }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #FD98FB; }
+    50% { text-shadow: 0 0 20px #FD98FB; }
+    100% { text-shadow: 0 0 5px #FD98FB; }
 }
